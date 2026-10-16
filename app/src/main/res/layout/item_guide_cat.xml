@@ -1,0 +1,12 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp" android:orientation="horizontal" android:gravity="center_vertical"
+    android:focusable="true" android:clickable="true" android:paddingStart="14dp" android:paddingEnd="16dp">
+    <View android:id="@+id/catMark" android:layout_width="3dp" android:layout_height="18dp"
+        android:background="@drawable/mark_bar" android:visibility="invisible"/>
+    <TextView android:id="@+id/catName" android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_weight="1" android:layout_marginStart="12dp" android:maxLines="1" android:ellipsize="end"
+        android:textColor="@color/text_dim" android:textSize="15sp" android:fontFamily="@font/sora_semibold"/>
+    <TextView android:id="@+id/catCount" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_marginStart="10dp" android:textColor="@color/text_faint" android:textSize="13sp"/>
+</LinearLayout>

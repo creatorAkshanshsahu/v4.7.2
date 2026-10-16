@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.AKTV" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/abyss</item>
+        <item name="android:fontFamily">@font/sora_regular</item>
+        <item name="colorAccent">@color/signal</item>
+    </style>
+</resources>

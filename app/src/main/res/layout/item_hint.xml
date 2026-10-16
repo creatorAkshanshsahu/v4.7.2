@@ -1,0 +1,6 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp" android:layout_height="117dp" android:layout_margin="8dp">
+    <TextView android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center"
+        android:padding="20dp" android:text="Hold OK on any channel to keep it here"
+        android:textColor="@color/text_dim" android:textSize="13sp"/>
+</FrameLayout>

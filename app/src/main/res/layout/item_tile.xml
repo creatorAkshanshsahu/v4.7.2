@@ -1,0 +1,22 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="208dp" android:layout_height="117dp" android:layout_margin="8dp"
+    android:focusable="true" android:clickable="true" android:clipToOutline="true"
+    android:foreground="@drawable/focus_ring">
+    <ImageView android:id="@+id/logo" android:layout_width="62dp" android:layout_height="62dp"
+        android:layout_gravity="center" android:layout_marginBottom="14dp" android:scaleType="fitCenter"/>
+    <TextView android:id="@+id/mono" android:layout_width="56dp" android:layout_height="56dp"
+        android:layout_gravity="center" android:layout_marginBottom="14dp" android:gravity="center"
+        android:textColor="#FFFFFF" android:textSize="19sp" android:fontFamily="@font/sora_bold"
+        android:includeFontPadding="false" android:visibility="gone"/>
+    <View android:layout_width="match_parent" android:layout_height="46dp" android:layout_gravity="bottom"
+        android:background="@drawable/scrim_card"/>
+    <View android:layout_width="6dp" android:layout_height="6dp" android:layout_margin="11dp"
+        android:background="@drawable/dot" android:backgroundTint="@color/live"/>
+    <TextView android:id="@+id/fav" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_gravity="top|end" android:layout_margin="8dp" android:text="♥" android:textColor="@color/live"
+        android:textSize="14sp" android:visibility="gone"/>
+    <TextView android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_gravity="bottom" android:layout_marginBottom="9dp" android:paddingStart="12dp" android:paddingEnd="12dp"
+        android:gravity="start" android:maxLines="1" android:ellipsize="end" android:textColor="@color/text"
+        android:textSize="12sp" android:fontFamily="@font/sora_semibold"/>
+</FrameLayout>
