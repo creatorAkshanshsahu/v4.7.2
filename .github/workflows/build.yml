@@ -1,0 +1,24 @@
+name: Build APK
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: { distribution: temurin, java-version: 17 }
+      - uses: gradle/actions/setup-gradle@v3
+        with: { gradle-version: 8.9 }
+      - run: gradle assembleArm32Debug assembleArm64Debug --stacktrace
+      - name: Rename APKs
+        run: |
+          mkdir -p out
+          cp app/build/outputs/apk/arm32/debug/*.apk out/AK-TV-arm32.apk
+          cp app/build/outputs/apk/arm64/debug/*.apk out/AK-TV-arm64.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AK-TV-apks
+          path: out/*.apk
